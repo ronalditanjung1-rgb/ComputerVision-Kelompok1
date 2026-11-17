@@ -13,11 +13,12 @@ plt.rcParams['figure.figsize'] = (16, 10)
 plt.rcParams['figure.dpi'] = 120
 
 print("="*70)
-print("🚀 CHECKPOINT 2: PERSPECTIVE TRANSFORM PIPELINE (SIAP JALAN)")
+print(" CHECKPOINT 2: PERSPECTIVE TRANSFORM PIPELINE (SIAP JALAN)")
 print("="*70)
 
-# 1. Coba download gambar contoh otomatis agar Anda langsung bisa lihat hasilnya
-sample_url = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Document_scan_example.jpg/800px-Document_scan_example.jpg"
+# 1. Coba download gambar 
+sample_url = ![Uploading 20261117_181634.jpg…]
+
 sample_path = "sample_document.jpg"
 
 try:
@@ -45,7 +46,7 @@ else:
 
 #lanjutan dari diatas
 # ============================================================
-# BAGIAN A: DEFINISI FUNGSI (DIGABUNG AGAR TIDAK ERROR)
+# BAGIAN A: DEFINISI FUNGSI
 # ============================================================
 def preprocess(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -94,7 +95,7 @@ def calculate_error(detected, gt):
     return np.mean([np.linalg.norm(detected[i] - gt[i]) for i in range(4)])
 
 # ============================================================
-# BAGIAN B: EKSEKUSI & VISUALISASI LANGSUNG DI COLAB
+# BAGIAN B: EKSEKUSI & VISUALISASI 
 # ============================================================
 print("\n" + "="*70)
 print("🔄 MEMPROSES GAMBAR & MENAMPILKAN HASIL...")
@@ -190,10 +191,10 @@ for path in image_paths:
     })
 
 # ============================================================
-# BAGIAN C: TABEL EVALUASI KUANTITATIF
+# BAGIAN C: TABEL EVALUASI 
 # ============================================================
 print("\n" + "="*70)
-print("📊 TABEL EVALUASI KUANTITATIF CHECKPOINT 2")
+print("📊 TABEL EVALUASI CHECKPOINT 2")
 print("="*70)
 df = pd.DataFrame(results_table)
 print(df.to_string(index=False))
